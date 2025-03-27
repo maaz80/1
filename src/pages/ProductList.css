@@ -1,0 +1,82 @@
+/* Product List Container */
+.product-list {
+  text-align: center;
+  padding: 30px;
+  background: #f8f8f8; /* Light background for contrast */
+  border-radius: 10px;
+}
+
+/* Section Heading */
+.product-list h2 {
+  font-size: 26px;
+  color: #321554; /* Dark navy blue */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Product Grid */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  width: 260px; /* Slightly wider for better spacing */
+  border: 2px solid #321554; /* Matches navbar theme */
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Product Name */
+.product-card h3 {
+  font-size: 18px;
+  color: #321554; /* Dark navy blue */
+  margin: 10px 0;
+}
+
+/* Product Price */
+.product-card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f5a623; /* Gold accent */
+  margin-bottom: 10px;
+}
+
+/* View Details Button */
+.view-details {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #f5a623; /* Gold accent */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.view-details:hover {
+  background: #e59400; /* Darker gold */
+}

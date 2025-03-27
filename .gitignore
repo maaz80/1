@@ -1,0 +1,54 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Node.js dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build output
+/build
+/.next
+/.vercel
+/.netlify
+
+# Logs & debugging files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing & coverage
+/coverage
+/jest.config.js
+/cypress/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Miscellaneous system files
+.DS_Store
+Thumbs.db
+
+# Editor & IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Linting & cache files
+/.eslintcache
+/.stylelintcache
+
+# Dependency resolution
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript & Babel compilation
+/dist
+/.turbo
+/.parcel-cache

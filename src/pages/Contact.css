@@ -1,0 +1,154 @@
+/* Full Page Background */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+  background: linear-gradient(135deg, #321554, #000);
+  color: white;
+  position: relative;
+}
+
+/* Left Section - Contact Info */
+.contact-info {
+  flex: 1;
+  max-width: 400px;
+}
+
+.contact-heading {
+  font-size: 36px;
+  color: #f5a623;
+  margin-bottom: 10px;
+}
+
+.contact-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Contact Details */
+.contact-details p {
+  font-size: 18px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  color: #f5a623;
+  font-size: 22px;
+}
+
+/* Right Section - Contact Form */
+.contact-form {
+  flex: 1;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Form Title */
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.contact-input, .contact-textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.contact-input:focus, .contact-textarea:focus {
+  border: 2px solid #f5a623;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Message Textarea */
+.contact-textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Send Button */
+.contact-button {
+  background: #f5a623;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(245, 166, 35, 0.5);
+}
+
+.contact-button:hover {
+  background: #e59400;
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.8);
+}
+
+/* Popup Message at the Top */
+.popup-message {
+  position: fixed;
+  top: 20px; /* Positioned at the top */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 2.5s ease-in-out;
+}
+
+.success {
+  background-color: #28a745; /* Green for success */
+}
+
+.error {
+  background-color: #dc3545; /* Red for error */
+}
+
+/* Popup Animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .contact-info, .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-details {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,376 @@
+.checkout-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  color: #321554;
+}
+
+.order-summary {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* ✅ Keep images small */
+.checkout-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.checkout-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.checkout-details p{
+color: #f5a623;
+}
+
+.total-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ✅ Form styling */
+.checkout-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.checkout-form button {
+  background: #f5a623;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.checkout-form button:hover {
+  background: #e59400;
+}
+
+/* ✅ UPI Payment Section */
+.upi-payment {
+  background-color: #20192b;
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px dashed #4CAF50;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.upi-payment h3 {
+  color: white;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.upi-payment p{
+  color: white;
+  font-weight: bold;
+}
+
+.upi-qr {
+  width: 150px;
+  height: 150px;
+  margin: 10px 0;
+}
+
+/* ✅ Fix UPI ID placeholder cut-off */
+.upi-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ✅ Styled UPI ID error message */
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+/* ✅ Success alert for order confirmation */
+.success-alert {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeOut 2s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ✅ Styled popup for 'Place Order' */
+.order-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+}
+
+.order-popup h2 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.order-popup p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.order-popup button {
+  background: #ff6600;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.order-popup button:hover {
+  background: #e65c00;
+}
+
+/* ✅ Empty Cart Styling */
+.empty-cart {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.empty-cart p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.shop-now-btn {
+  display: inline-block;
+  background-color: #f5a623;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.shop-now-btn:hover {
+  background-color: #e59400;
+}
+
+/* ✅ Empty Cart Icon */
+.empty-cart-icon {
+  font-size: 80px;
+  color: #ccc;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .checkout-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .checkout-item {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .checkout-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .checkout-details h4 {
+    font-size: 14px;
+  }
+
+  .total-price {
+    font-size: 18px;
+  }
+
+  .checkout-form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .checkout-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-container {
+    width: auto;
+  }
+
+  .checkout-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .checkout-item img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .checkout-details h4 {
+    font-size: 13px;
+  }
+
+  .checkout-form input {
+    font-size: 13px;
+    padding: 7px;
+  }
+
+  .checkout-form button {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+
+
+/* ✅ Invalid UPI ID Alert Styling */
+.invalid-upi-alert {
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff3333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: fadeOut 3s ease-in-out;
+}
+
+/* ✅ Payment Success Alert Styling */
+.payment-alert {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: fadeOut 3s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.checkout-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ✅ Styled popup for UPI payment reminder */
+.payment-reminder-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.payment-reminder-content h3 {
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.payment-reminder-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.payment-reminder-content button {
+  background: #ff6600;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.payment-reminder-content button:hover {
+  background: #e65c00;
+}
+
+/* ✅ Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}

@@ -1,0 +1,148 @@
+/* About Page Container */
+.about-container {
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(135deg, #321554, #000);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Header */
+.about-header {
+  padding: 20px;
+  background: #f5a623;
+  color: #321554;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.about-header p {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* About Content */
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  max-width: 500px;
+}
+
+.about-text h2 {
+  color: #f5a623;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* About Image */
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mission & Vision */
+.mission-vision {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.mission, .vision {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+  min-width: 300px;
+}
+
+.mission h2, .vision h2 {
+  color: #f5a623;
+  font-size: 24px;
+}
+
+.mission p, .vision p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+  margin-top: 50px;
+}
+
+.contact-section h2 {
+  color: #f5a623;
+  font-size: 28px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #f5a623;
+  color: #321554;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #e59400;
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+  }
+
+  .mission, .vision {
+    width: 100%;
+  }
+}

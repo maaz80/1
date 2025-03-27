@@ -1,0 +1,45 @@
+/* Ensure Consistent Scaling */
+html {
+  font-size: 20px; /* Increase the base font size for better scaling */
+  zoom: 1.5; /* Adjust this value if needed */
+}
+
+/* Fix layout inconsistencies */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix hero section height */
+.hero {
+  min-height: 500px; /* Ensure proper height at 100% zoom */
+  padding: 80px 20px;
+}
+
+/* Improve text scaling */
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+/* Ensure buttons scale properly */
+.btn {
+  font-size: 1rem;
+  padding: 12px 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  html {
+    font-size: 16px; /* Reduce font size for smaller screens */
+    zoom: 1; /* Reset zoom for mobile */
+  }
+
+  .hero {
+    min-height: 400px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
