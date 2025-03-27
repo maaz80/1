@@ -118,43 +118,43 @@ An ideal gift for friends, family, or anyone who loves NY-inspired fashion, maki
   };
 
   return (
-    <Router>
-      <ScrollToTop />
+     <div>
+       <ScrollToTop />
 
-      <Navbar user={user} handleLogout={handleLogout} />
+<Navbar user={user} handleLogout={handleLogout} />
 
-      <Routes>
-        <Route path="/Mellow-caps" element={<Home />} />
-        <Route path="/shop" element={<ProductList products={products} />} />
-        <Route
-          path="/product/:id"
-          element={
-            <ProductDetail
-              products={products}
-              cart={cart}
-              addToCart={addToCart}
-              updateCartItem={updateCartItem}
-            />
-          }
-        />
-        <Route
-          path="/cart"
-          element={
-            <Cart cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} />
-          }
-        />
-        <Route
-          path="/checkout"
-          element={<Checkout cart={cart} totalPrice={totalPrice} setCart={setCart} />}
-        />
-        <Route path="/place-order" element={<PlaceOrder />} />
-        <Route path="/login" element={<LoginSignup handleLogin={handleLogin} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+<Routes>
+  <Route path="/Mellow-caps" element={<Home />} />
+  <Route path="/shop" element={<ProductList products={products} />} />
+  <Route
+    path="/product/:id"
+    element={
+      <ProductDetail
+        products={products}
+        cart={cart}
+        addToCart={addToCart}
+        updateCartItem={updateCartItem}
+      />
+    }
+  />
+  <Route
+    path="/cart"
+    element={
+      <Cart cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} />
+    }
+  />
+  <Route
+    path="/checkout"
+    element={<Checkout cart={cart} totalPrice={totalPrice} setCart={setCart} />}
+  />
+  <Route path="/place-order" element={<PlaceOrder />} />
+  <Route path="/login" element={<LoginSignup handleLogin={handleLogin} />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/contact" element={<Contact />} />
+</Routes>
 
-      <Footer />
-    </Router>
+<Footer />
+     </div>
   );
 }
 
