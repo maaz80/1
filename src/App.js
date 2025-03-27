@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as  Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -126,7 +126,7 @@ An ideal gift for friends, family, or anyone who loves NY-inspired fashion, maki
       <Navbar user={user} handleLogout={handleLogout} />
 
       <Routes>
-        <Route path="/Mellow-caps" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/shop" element={<ProductList products={products} />} />
         <Route
           path="/product/:id"
