@@ -27,13 +27,13 @@ function App() {
       bulletPoints: [
         `🔥 PREMIUM BLACK BASEBALL CAP – A PERFECT STYLE STATEMENT
 Crafted with high-quality fabric, this black baseball cap is designed to add a sleek and stylish touch to your everyday look. Whether you're going for a sporty, casual, or trendy outfit, this cap blends effortlessly with any attire.`,
-    `🧢 FREESIZE DESIGN – PERFECT & COMFORTABLE FIT FOR ALL
+        `🧢 FREESIZE DESIGN – PERFECT & COMFORTABLE FIT FOR ALL
 Designed to fit all head sizes, this cap comes with an adjustable strap at the back, ensuring a secure yet comfortable fit. Whether you have a small or large head, the freesize structure provides an easy, custom fit without any discomfort.`,
-    `💪 DURABLE & HIGH-QUALITY MATERIAL – BUILT TO LAST
+        `💪 DURABLE & HIGH-QUALITY MATERIAL – BUILT TO LAST
 Constructed with top-notch materials and reinforced stitching, this cap is highly durable and retains its shape even with regular use. Whether worn for sports, outdoor activities, or daily wear, it remains in excellent condition for a long time.`,
-    `☁️ ULTRA-COMFORTABLE & BREATHABLE – WEAR IT ALL DAY LONG
+        `☁️ ULTRA-COMFORTABLE & BREATHABLE – WEAR IT ALL DAY LONG
 Made from lightweight, breathable, and sweat-absorbing fabric, this cap keeps you cool and comfortable throughout the day. The air-circulating design prevents heat buildup, making it ideal for both warm and cool weather.`
-]
+      ]
     },
     {
       id: 2,
@@ -43,16 +43,16 @@ Made from lightweight, breathable, and sweat-absorbing fabric, this cap keeps yo
       image2: `${process.env.PUBLIC_URL}/images/cap2(b).jpg`,
       image3: `${process.env.PUBLIC_URL}/images/cap2(c).jpg`,
       description: "Unleash your passion for biking with the Gorgeous KTM Bike Riding Sports and Casual Cap by Gorgeous Caps. Designed for KTM bike lovers and riders, this premium black baseball cap features a bold orange KTM 3D embroidery logo that perfectly represents the KTM spirit. Whether you're on a thrilling bike ride or just looking for a stylish casual cap, this cap is the perfect addition to your outfit. Made from high-quality breathable fabric, it offers all-day comfort, while the freesize adjustable fit ensures a snug and secure feel for everyone. Elevate your biker look with this stylish and durable cap!",
-  bulletPoints: [
-    `🏍️ KTM BIKE LOVERS’ MUST-HAVE – PERFECT FOR RIDERS & ENTHUSIASTS
+      bulletPoints: [
+        `🏍️ KTM BIKE LOVERS’ MUST-HAVE – PERFECT FOR RIDERS & ENTHUSIASTS
 Designed for passionate KTM bike riders, this cap features a stylish black and orange color combination that matches the iconic KTM bike theme, making it an essential accessory for every biker.`,
-    `🔥 BOLD 3D EMBROIDERY ‘KTM’ LOGO – PREMIUM LOOK & FINISH
+        `🔥 BOLD 3D EMBROIDERY ‘KTM’ LOGO – PREMIUM LOOK & FINISH
 Stand out with a high-quality 3D embroidered KTM logo in vibrant orange, giving the cap a premium and eye-catching look that reflects the power and speed of KTM bikes.`,
-    `🧢 FREESIZE DESIGN – BEST FIT FOR ALL HEAD SIZES
+        `🧢 FREESIZE DESIGN – BEST FIT FOR ALL HEAD SIZES
 The cap comes in a universal freesize fit with an adjustable strap at the back, ensuring a snug yet comfortable fit for all head sizes, making it suitable for both men and women.`,
-    `💪 DURABLE & LONG-LASTING QUALITY – BUILT FOR ROUGH USE
+        `💪 DURABLE & LONG-LASTING QUALITY – BUILT FOR ROUGH USE
 Constructed with strong stitching and high-quality fabric, this cap is designed to withstand rough conditions, ensuring long-term durability even with daily outdoor use.`
-  ]
+      ]
     },
     {
       id: 3,
@@ -104,7 +104,9 @@ An ideal gift for friends, family, or anyone who loves NY-inspired fashion, maki
   const removeFromCart = (productId) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
   };
+   
 
+  
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   const handleLogin = (email) => {
@@ -118,43 +120,43 @@ An ideal gift for friends, family, or anyone who loves NY-inspired fashion, maki
   };
 
   return (
-     <div>
-       <ScrollToTop />
+    <div>
+      <ScrollToTop />
 
-<Navbar user={user} handleLogout={handleLogout} />
+      <Navbar user={user} handleLogout={handleLogout} />
 
-<Routes>
-  <Route path="/Mellow-caps" element={<Home />} />
-  <Route path="/shop" element={<ProductList products={products} />} />
-  <Route
-    path="/product/:id"
-    element={
-      <ProductDetail
-        products={products}
-        cart={cart}
-        addToCart={addToCart}
-        updateCartItem={updateCartItem}
-      />
-    }
-  />
-  <Route
-    path="/cart"
-    element={
-      <Cart cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} />
-    }
-  />
-  <Route
-    path="/checkout"
-    element={<Checkout cart={cart} totalPrice={totalPrice} setCart={setCart} />}
-  />
-  <Route path="/place-order" element={<PlaceOrder />} />
-  <Route path="/login" element={<LoginSignup handleLogin={handleLogin} />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/contact" element={<Contact />} />
-</Routes>
+      <Routes>
+        <Route path="/Mellow-caps" element={<Home />} />
+        <Route path="/shop" element={<ProductList products={products} />} />
+        <Route
+          path="/product/:id"
+          element={
+            <ProductDetail
+              products={products}
+              cart={cart}
+              addToCart={addToCart}
+              updateCartItem={updateCartItem}
+            />
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <Cart cart={cart} updateCartItem={updateCartItem} removeFromCart={removeFromCart} />
+          }
+        />
+        <Route
+          path="/checkout"
+          element={<Checkout cart={cart} totalPrice={totalPrice} setCart={setCart} />}
+        />
+        <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/login" element={<LoginSignup handleLogin={handleLogin} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
-<Footer />
-     </div>
+      <Footer />
+    </div>
   );
 }
 
