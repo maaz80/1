@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as  Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -106,7 +106,7 @@ An ideal gift for friends, family, or anyone who loves NY-inspired fashion, maki
   };
    
 
-  
+
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   const handleLogin = (email) => {
